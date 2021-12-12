@@ -3,13 +3,14 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const blogRoutes = require('./routes/blogRoutes')
 const app = express()
+const Port = process.env.PORT || 3000
 
 //connect to MongoDB
 const dbURI = 'mongodb+srv://salar:456676@trainingcluster.nw0by.mongodb.net/training?retryWrites=true&w=majority'
 mongoose.connect(dbURI)
 .then((result) => {
     console.log("connected to DB")
-    app.listen(3000) // Da wir erstmal mit dem Datenbank verbunden werden und nur dann zu den Requeste listenen, daher packen wir das in dem then-Block, um sicher zu sein, dass unser Anwendung wird nur aktive sein, wenn die Connection zum DB erfolgreich wae 
+    app.listen(Port) // Da wir erstmal mit dem Datenbank verbunden werden und nur dann zu den Requeste listenen, daher packen wir das in dem then-Block, um sicher zu sein, dass unser Anwendung wird nur aktive sein, wenn die Connection zum DB erfolgreich wae 
 })
 .catch((err) => {console.log(err)})
 
