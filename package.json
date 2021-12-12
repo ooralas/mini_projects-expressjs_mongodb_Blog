@@ -1,22 +1,23 @@
 {
-  "name": "crash-course",
+  "name": "miniprojects-blogapp",
   "version": "1.0.0",
-  "description": "a node crash course",
-  "main": "server.js",
+  "description": "mini Blog App made with ExpressJS & MongoDB using MVC Pattern. inspired by the Net Ninja",
+  "main": "app.js",
+  "engines": {
+    "node": "14.17.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js",
+    "heroku-postbuild": "npm install --only=dev && npm install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/node-crash-course.git"
+    "url": "git+https://github.com/ooralas/mini_projects_expressjs_mongodb_Blog"
   },
-  "author": "net ninja",
+  "author": "Salar Al Ali",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iamshaunjp/node-crash-course/issues"
-  },
-  "homepage": "https://github.com/iamshaunjp/node-crash-course#readme",
+  "homepage": "https://github.com/ooralas/mini_projects_expressjs_mongodb_Blog",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
