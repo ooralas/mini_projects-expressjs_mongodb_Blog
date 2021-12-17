@@ -5,7 +5,7 @@ const blogRoutes = require('./routes/blogRoutes')
 const app = express()
 
 //connect to MongoDB
-const dbURI = 'mongodb+srv://salar:456676@trainingcluster.nw0by.mongodb.net/training?retryWrites=true&w=majority'
+const dbURI = process.env.MONGODB_URI
 mongoose.connect(dbURI)
 .then((result) => {
     console.log("connected to DB")
