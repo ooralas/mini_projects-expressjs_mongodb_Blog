@@ -4,7 +4,7 @@
   "description": "mini Blog App made with ExpressJS & MongoDB using MVC Pattern. inspired by the Net Ninja",
   "main": "app.js",
   "engines": {
-    "node": "14.17.0"
+    "node": "16.14.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,10 +19,11 @@
   "license": "ISC",
   "homepage": "https://github.com/ooralas/mini_projects_expressjs_mongodb_Blog",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
-    "mongoose": "^6.0.12",
+    "mongoose": "^6.5.2",
     "morgan": "^1.10.0"
   }
 }
